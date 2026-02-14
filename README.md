@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine for Marie 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      color: #333;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3em;
+      margin-top: 50px;
+      color: #fff;
+    }
+    p {
+      font-size: 1.2em;
+      margin: 20px;
+      color: #fff;
+    }
+    .button {
+      background-color: #ff6f91;
+      border: none;
+      color: white;
+      padding: 15px 25px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 25px;
+      margin: 20px;
+      transition: transform 0.2s;
+    }
+    .button:hover {
+      background-color: #ff477e;
+      transform: scale(1.1);
+    }
+    #joke, #quote {
+      font-size: 1.3em;
+      margin: 20px;
+      font-style: italic;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hey Marie! 💖</h1>
+  <p>In case nobody wished you a Happy Valentine’s Day… don’t worry, I got you! 😎</p>
+  <p>Here’s a little dose of laughs and motivation just for you:</p>
+
+  <button class="button" onclick="newJoke()">Hit me with a joke 😂</button>
+  <div id="joke">Click the button for a joke!</div>
+
+  <button class="button" onclick="newQuote()">Motivate me 💪</button>
+  <div id="quote">Click the button for motivation!</div>
+
+  <script>
+    // Array of jokes
+    const jokes = [
+      "Roses are red, violets are blue, I’m not great at poems… but I still got you! 😜",
+      "Are you made of copper and tellurium? Because you’re Cu-Te! 🥰",
+      "Do you have a map? I keep getting lost in your vibe! 😂",
+      "I was going to give you a Valentine’s card… but memes are faster! 💌",
+      "Are you French? Because ‘Eiffel’ for you! 😎",
+      "If you were a vegetable, you’d be a cute-cumber! 🥒💖"
+    ];
+
+    // Array of motivational quotes
+    const quotes = [
+      "You’re awesome and don’t let anyone tell you otherwise!",
+      "Even on tough days, you shine brighter than you know!",
+      "Keep smiling—your energy is contagious!",
+      "You’ve got this, superstar!",
+      "Small steps every day lead to big wins!",
+      "Be yourself, everyone else is already taken! 😎"
+    ];
+
+    // Functions to show random joke or quote
+    function newJoke() {
+      const joke = jokes[Math.floor(Math.random() * jokes.length)];
+      document.getElementById('joke').innerText = joke;
+    }
+
+    function newQuote() {
+      const quote = quotes[Math.floor(Math.random() * quotes.length)];
+      document.getElementById('quote').innerText = quote;
+    }
+  </script>
+</body>
+</html>
